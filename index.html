@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Smart Wall | Раздвижные перегородки — прототип</title>
+  <meta name="description" content="Прототип обновлённого сайта SmartWall: раздвижные и трансформируемые перегородки со звукоизоляцией до 54 дБ.">
+  <link rel="icon" href="assets/img/logo-dark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="proto-bar">Прототип обновлённого сайта · контент и фото взяты с smart-wall.ru · формы работают в демо-режиме</div>
+
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="logo" aria-label="SmartWall — на главную"><img src="assets/img/logo-dark.svg" alt="SmartWall раздвижные стены" width="144" height="40"></a>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <a href="#catalog">Продукция</a>
+      <a href="#areas">Где применяют</a>
+      <a href="#projects">Проекты</a>
+      <a href="#process">Как мы работаем</a>
+      <a href="#about">О компании</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header__actions">
+      <a class="header__phone" href="tel:+74997558845">+7 (499) 755-88-45</a>
+      <a class="btn btn--primary btn--sm" href="#lead">Рассчитать стоимость</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow">Раздвижные и трансформируемые перегородки</p>
+        <h1>Зонируйте пространство без капитальных стен — со звукоизоляцией до&nbsp;54&nbsp;дБ</h1>
+        <p class="lead">Собственное производство с 2009 года. Стеклянные, глухие и комбинированные системы для офисов, школ, отелей и частных интерьеров. Берём на себя замер, проект, изготовление и монтаж.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#lead">Рассчитать стоимость</a>
+          <a class="btn btn--ghost" href="#quiz">Подобрать систему за 1 минуту</a>
+        </div>
+        <ul class="hero__facts">
+          <li><b>с 2004</b> на рынке</li>
+          <li><b>3000+</b> реализованных проектов</li>
+          <li><b>от 21 872 ₽/м²</b> стоимость</li>
+        </ul>
+      </div>
+      <div class="hero__media">
+        <img src="assets/img/hero.jpg" alt="Стеклянная раздвижная перегородка SmartWall WG5 в переговорной" width="1920" height="768" fetchpriority="high">
+        <div class="hero__badge">
+          <span>Новинка</span>
+          <b>SmartWall WG5</b>
+          <small>Светопрозрачная система, 42 дБ</small>
+          <a href="#catalog">Смотреть →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section class="adv" id="about">
+    <div class="container">
+      <div class="adv__grid">
+        <div class="adv__item"><img src="assets/img/i1.png" alt="" width="56" height="56"><h3>Высокое качество</h3><p>Не требует согласования с арендодателем</p></div>
+        <div class="adv__item"><img src="assets/img/i2.png" alt="" width="56" height="56"><h3>Гарантия надёжности</h3><p>Монтаж возможен без остановки работы офиса</p></div>
+        <div class="adv__item"><img src="assets/img/i3.png" alt="" width="56" height="56"><h3>Инновационный подход</h3><p>Перегородку всегда можно переставить</p></div>
+        <div class="adv__item"><img src="assets/img/i4.png" alt="" width="56" height="56"><h3>Проект «под ключ»</h3><p>Не требуется согласование на перепланировку</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="section section--gray" id="catalog">
+    <div class="container">
+      <div class="section__head">
+        <h2>Производство раздвижных стен</h2>
+        <p>Системы различаются внешним видом, звукоизоляцией, функциональностью и стоимостью. Выберите тип — и сравните ключевые характеристики.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Фильтр по типу перегородок">
+        <button class="chip is-active" data-filter="all">Все системы</button>
+        <button class="chip" data-filter="glass">Стеклянные</button>
+        <button class="chip" data-filter="solid">Глухие (панели)</button>
+        <button class="chip" data-filter="quiet">Звукоизоляция от 46 дБ</button>
+      </div>
+      <div class="cards" id="cards">
+        <article class="card" data-tags="glass">
+          <div class="card__img"><img src="assets/img/p-g5.jpg" alt="Цельностеклянная перегородка SmartWall G5" loading="lazy"><span class="tag">Цельное стекло</span></div>
+          <div class="card__body">
+            <h3>SmartWall G5</h3>
+            <p class="card__sub">Цельностеклянные раздвижные стены для дома и офиса</p>
+            <dl class="specs"><div><dt>Заполнение</dt><dd>Стекло 10/12 мм закалённое</dd></div></dl>
+            <div class="card__foot"><div class="price"><small>от</small> 22 913 ₽/м²</div><a class="btn btn--outline btn--sm" href="#lead" data-product="SmartWall G5">Узнать цену</a></div>
+          </div>
+        </article>
+        <article class="card" data-tags="glass">
+          <div class="card__img"><img src="assets/img/p-wg5.jpg" alt="Светопрозрачная система SmartWall WG5" loading="lazy"><span class="tag tag--accent">Выбор архитекторов</span></div>
+          <div class="card__body">
+            <h3>SmartWall WG5</h3>
+            <p class="card__sub">Акустическая трансформируемая светопрозрачная система</p>
+            <dl class="specs"><div><dt>Звукоизоляция</dt><dd>42 дБ</dd></div><div><dt>Заполнение</dt><dd>Стекло 6 мм, прозрачное или окрашенное</dd></div></dl>
+            <div class="card__foot"><div class="price"><small>от</small> 38 170 ₽/м²</div><a class="btn btn--outline btn--sm" href="#lead" data-product="SmartWall WG5">Узнать цену</a></div>
+          </div>
+        </article>
+        <article class="card" data-tags="solid quiet">
+          <div class="card__img"><img src="assets/img/p-h7.jpg" alt="Акустическая перегородка SmartWall H7" loading="lazy"><span class="tag tag--accent">До 54 дБ</span></div>
+          <div class="card__body">
+            <h3>SmartWall H7</h3>
+            <p class="card__sub">Акустические раздвижные стены максимальной изоляции</p>
+            <dl class="specs"><div><dt>Звукоизоляция</dt><dd>до 54 дБ</dd></div><div><dt>Заполнение</dt><dd>ЛДСП, шпон, МДФ, пластик, ткань, магнитно-маркерная поверхность</dd></div></dl>
+            <div class="card__foot"><div class="price"><small>от</small> 30 877 ₽/м²</div><a class="btn btn--outline btn--sm" href="#lead" data-product="SmartWall H7">Узнать цену</a></div>
+          </div>
+        </article>
+        <article class="card" data-tags="solid quiet">
+          <div class="card__img"><img src="assets/img/p-h7k.jpg" alt="Акустическая перегородка SmartWall H7K" loading="lazy"></div>
+          <div class="card__body">
+            <h3>SmartWall H7K</h3>
+            <p class="card__sub">Акустические раздвижные стены</p>
+            <dl class="specs"><div><dt>Звукоизоляция</dt><dd>46 дБ</dd></div><div><dt>Заполнение</dt><dd>ЛДСП, шпон, МДФ, пластик, ткань, магнитно-маркерная поверхность</dd></div></dl>
+            <div class="card__foot"><div class="price"><small>от</small> 30 877 ₽/м²</div><a class="btn btn--outline btn--sm" href="#lead" data-product="SmartWall H7K">Узнать цену</a></div>
+          </div>
+        </article>
+        <article class="card" data-tags="solid">
+          <div class="card__img"><img src="assets/img/p-h5k.jpg" alt="Акустическая перегородка SmartWall H5K" loading="lazy"><span class="tag">Лучшая цена</span></div>
+          <div class="card__body">
+            <h3>SmartWall H5K</h3>
+            <p class="card__sub">Акустические раздвижные стены</p>
+            <dl class="specs"><div><dt>Звукоизоляция</dt><dd>42 дБ</dd></div><div><dt>Заполнение</dt><dd>ЛДСП, шпон, МДФ, пластик, ткань, магнитно-маркерная поверхность</dd></div></dl>
+            <div class="card__foot"><div class="price"><small>от</small> 21 872 ₽/м²</div><a class="btn btn--outline btn--sm" href="#lead" data-product="SmartWall H5K">Узнать цену</a></div>
+          </div>
+        </article>
+        <article class="card" data-tags="solid">
+          <div class="card__img"><img src="assets/img/p-h5f.jpg" alt="Акустическая перегородка SmartWall H5F" loading="lazy"></div>
+          <div class="card__body">
+            <h3>SmartWall H5F</h3>
+            <p class="card__sub">Акустические раздвижные стены</p>
+            <dl class="specs"><div><dt>Звукоизоляция</dt><dd>от 42 до 50 дБ</dd></div><div><dt>Заполнение</dt><dd>Панель СМЛ, окрашенная по RAL</dd></div></dl>
+            <div class="card__foot"><div class="price"><small>от</small> 26 790 ₽/м²</div><a class="btn btn--outline btn--sm" href="#lead" data-product="SmartWall H5F">Узнать цену</a></div>
+          </div>
+        </article>
+      </div>
+      <p class="note">Цены указаны за м² и зависят от размеров, отделки и фурнитуры. Точный расчёт — после замера.</p>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section quiz" id="quiz">
+    <div class="container quiz__inner">
+      <div class="quiz__intro">
+        <h2>Не знаете, какая система подойдёт?</h2>
+        <p>Ответьте на 4 вопроса — менеджер подберёт решение и пришлёт расчёт. Это быстрее, чем изучать весь каталог.</p>
+        <ul class="ticks">
+          <li>Рекомендация по системе и отделке</li>
+          <li>Ориентировочная стоимость</li>
+          <li>Бесплатный замер</li>
+        </ul>
+      </div>
+      <form class="quiz__form" id="quizForm" novalidate>
+        <div class="quiz__progress"><span id="quizBar"></span></div>
+        <p class="quiz__step" id="quizStepLabel">Шаг 1 из 4</p>
+
+        <fieldset class="q is-active" data-step="1">
+          <legend>Где будут использоваться перегородки?</legend>
+          <label class="opt"><input type="radio" name="object" value="Офисное здание" required><span>Офисное здание</span></label>
+          <label class="opt"><input type="radio" name="object" value="Школа / ДОУ"><span>Школа / ДОУ</span></label>
+          <label class="opt"><input type="radio" name="object" value="Торговый центр"><span>Торговый центр</span></label>
+          <label class="opt"><input type="radio" name="object" value="Жилое помещение"><span>Жилое помещение</span></label>
+        </fieldset>
+        <fieldset class="q" data-step="2">
+          <legend>Площадь перегородок</legend>
+          <label class="opt"><input type="radio" name="area" value="15–50 м²"><span>15–50 м²</span></label>
+          <label class="opt"><input type="radio" name="area" value="50–100 м²"><span>50–100 м²</span></label>
+          <label class="opt"><input type="radio" name="area" value="100–200 м²"><span>100–200 м²</span></label>
+          <label class="opt"><input type="radio" name="area" value="более 200 м²"><span>более 200 м²</span></label>
+        </fieldset>
+        <fieldset class="q" data-step="3">
+          <legend>Нужная звукоизоляция</legend>
+          <label class="opt"><input type="radio" name="sound" value="Не требуется"><span>Не требуется</span></label>
+          <label class="opt"><input type="radio" name="sound" value="30–35 дБ"><span>30–35 дБ</span></label>
+          <label class="opt"><input type="radio" name="sound" value="35–42 дБ"><span>35–42 дБ</span></label>
+          <label class="opt"><input type="radio" name="sound" value="42–50 дБ"><span>42–50 дБ</span></label>
+        </fieldset>
+        <fieldset class="q" data-step="4">
+          <legend>Облицовочный материал</legend>
+          <label class="opt"><input type="radio" name="finish" value="Стекло"><span>Стекло</span></label>
+          <label class="opt"><input type="radio" name="finish" value="ЛДСП / пластик"><span>ЛДСП / пластик</span></label>
+          <label class="opt"><input type="radio" name="finish" value="Шпон"><span>Шпон</span></label>
+          <label class="opt"><input type="radio" name="finish" value="Ткань"><span>Ткань</span></label>
+        </fieldset>
+        <fieldset class="q q--final" data-step="5">
+          <legend>Куда отправить подбор?</legend>
+          <input class="input" type="text" name="name" placeholder="Ваше имя" autocomplete="name">
+          <input class="input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+          <label class="consent"><input type="checkbox" required> Согласен(а) на <a href="#">обработку персональных данных</a></label>
+        </fieldset>
+
+        <p class="form-error" id="quizError" role="alert" hidden></p>
+        <div class="quiz__nav">
+          <button type="button" class="btn btn--ghost-dark" id="quizBack" hidden>Назад</button>
+          <button type="button" class="btn btn--primary" id="quizNext">Далее</button>
+        </div>
+        <p class="quiz__done" id="quizDone" hidden><b>Спасибо!</b> Это демо-режим: в рабочей версии заявка уйдёт менеджеру.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section class="section section--gray" id="areas">
+    <div class="container">
+      <div class="section__head">
+        <h2>Области применения</h2>
+        <p>Перегородки SmartWall работают в офисах, торговых и бизнес-центрах, гостиницах, учебных и государственных учреждениях, театрах, музеях, спортивных центрах и частных интерьерах.</p>
+      </div>
+      <div class="areas">
+        <a class="area" href="#lead"><img src="assets/img/a-office.jpg" alt="" loading="lazy"><span>Офисы</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-bc.jpg" alt="" loading="lazy"><span>Бизнес-центры</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-conf.jpg" alt="" loading="lazy"><span>Конференц-залы</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-mall.jpg" alt="" loading="lazy"><span>Торговые центры</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-shop.jpg" alt="" loading="lazy"><span>Магазины</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-hotel.jpg" alt="" loading="lazy"><span>Гостиницы</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-school.jpg" alt="" loading="lazy"><span>Школы</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-kids.jpg" alt="" loading="lazy"><span>Детские сады</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-sport.jpg" alt="" loading="lazy"><span>Спортивные залы</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-dance.jpg" alt="" loading="lazy"><span>Танцевальные студии</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-concert.jpg" alt="" loading="lazy"><span>Концертные залы</span></a>
+        <a class="area" href="#lead"><img src="assets/img/a-flat.jpg" alt="" loading="lazy"><span>Квартиры</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__head section__head--row">
+        <div>
+          <h2>Наши проекты</h2>
+          <p>Более 3000 объектов — от стандартных решений до креативных проектов с яркими функциональными зонами.</p>
+        </div>
+        <a class="btn btn--outline" href="#">Все проекты</a>
+      </div>
+      <div class="projects">
+        <a class="project project--lg" href="#"><img src="assets/img/pr-bolshoi.jpg" alt="" loading="lazy"><div><small>Культура</small><h3>Большой театр</h3><p>Бетховенский зал — многофункциональное пространство</p></div></a>
+        <a class="project" href="#"><img src="assets/img/pr-mailru.jpg" alt="" loading="lazy"><div><small>Офис</small><h3>Mail.ru</h3></div></a>
+        <a class="project" href="#"><img src="assets/img/pr-cbre.jpg" alt="" loading="lazy"><div><small>Офис · Москва-Сити</small><h3>CBRE</h3></div></a>
+        <a class="project" href="#"><img src="assets/img/pr-afimall.jpg" alt="" loading="lazy"><div><small>ТРЦ</small><h3>Афимолл Сити</h3></div></a>
+        <a class="project" href="#"><img src="assets/img/pr-president.jpg" alt="" loading="lazy"><div><small>Бизнес-центр</small><h3>БЦ «Президент»</h3></div></a>
+        <a class="project" href="#"><img src="assets/img/pr-olimp.jpg" alt="" loading="lazy"><div><small>Образование</small><h3>Школа «Олимп»</h3></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section section--dark" id="process">
+    <div class="container">
+      <div class="section__head">
+        <h2>Как мы работаем</h2>
+        <p>Управляем проектом от идеи до сдачи — вам не нужно координировать несколько подрядчиков.</p>
+      </div>
+      <ol class="steps">
+        <li><b>1</b><h3>Заявка и консультация</h3><p>Обсуждаем задачу, подбираем систему и отделку.</p></li>
+        <li><b>2</b><h3>Бесплатный замер</h3><p>Инженер выезжает на объект и снимает размеры.</p></li>
+        <li><b>3</b><h3>Дизайн и расчёт</h3><p>Готовим проект и точную смету.</p></li>
+        <li><b>4</b><h3>Производство</h3><p>Изготавливаем панели и профиль на собственном производстве.</p></li>
+        <li><b>5</b><h3>Монтаж и гарантия</h3><p>Устанавливаем, не останавливая работу офиса, и даём гарантию.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="section" id="clients">
+    <div class="container">
+      <div class="section__head"><h2>Нам доверяют</h2></div>
+      <div class="logos">
+        <img src="assets/img/c-sber.jpg" alt="Сбербанк" loading="lazy">
+        <img src="assets/img/c-mailru.jpg" alt="Mail.ru Group" loading="lazy">
+        <img src="assets/img/c-alfa.jpg" alt="Альфа-Лизинг" loading="lazy">
+        <img src="assets/img/c-ge.jpg" alt="General Electric" loading="lazy">
+        <img src="assets/img/c-castrol.jpg" alt="Castrol" loading="lazy">
+        <img src="assets/img/c-1c.jpg" alt="1С" loading="lazy">
+      </div>
+      <div class="reviews">
+        <figure class="review">
+          <img src="assets/img/c-rosbank.jpg" alt="Росбанк" width="100" height="100" loading="lazy">
+          <blockquote>Раздвижная перегородка со встроенной дверью была идеальным решением под наши задачи разделения помещения на несколько зон. Замер и производство провели оперативно. Дизайнерское решение было довольно сложным в исполнении. Компания не подвела. Спасибо компании SmartWall за качественную работу.</blockquote>
+          <figcaption><b>Росбанк</b> · руководитель проекта</figcaption>
+        </figure>
+        <figure class="review">
+          <img src="assets/img/c-holiday.jpg" alt="Holiday Inn" width="100" height="100" loading="lazy">
+          <blockquote>Решение от компании SmartWall идеально вписалось в нашу концепцию трансформации пространства между рестораном и зоной завтраков. Производитель подобрал идеальные материалы. Срок и качество исполнения без нареканий. Благодарим компанию за сотрудничество.</blockquote>
+          <figcaption><b>Holiday Inn</b> · руководитель проекта</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--gray" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head"><h2>Частые вопросы</h2></div>
+      <details class="faq"><summary>Нужно ли согласовывать перегородку с арендодателем или перепланировку?</summary><p>Нет. Трансформируемые перегородки не требуют согласования с арендодателем и перепланировки.</p></details>
+      <details class="faq"><summary>Можно ли вести монтаж, не останавливая работу офиса?</summary><p>Да, монтаж возможен без остановки работы офиса.</p></details>
+      <details class="faq"><summary>Какую звукоизоляцию обеспечивают перегородки?</summary><p>От 42 дБ у стеклянной системы WG5 до 54 дБ у акустических систем H7 — это сопоставимо со стационарными стенами.</p></details>
+      <details class="faq"><summary>Можно ли потом переставить перегородку?</summary><p>Да, систему можно переставить и перепланировать пространство под новые задачи.</p></details>
+    </div>
+  </section>
+
+  <!-- LEAD -->
+  <section class="lead-block" id="lead">
+    <div class="container lead-block__inner">
+      <div>
+        <h2>Оставьте заявку — замер бесплатно</h2>
+        <p>Перезвоним, уточним задачу и подготовим расчёт. Можно прикрепить планировку или ТЗ.</p>
+        <a class="lead-block__phone" href="tel:+74997558845">+7 (499) 755-88-45</a>
+      </div>
+      <form class="lead-form" id="leadForm" novalidate>
+        <input class="input" type="text" name="name" placeholder="Ваше имя" autocomplete="name">
+        <input class="input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        <input class="input" type="hidden" name="product" id="leadProduct" value="">
+        <label class="file"><input type="file" name="file"> <span id="fileName">Прикрепить планировку или ТЗ</span></label>
+        <label class="consent"><input type="checkbox" required> Согласен(а) на <a href="#">обработку персональных данных</a></label>
+        <p class="form-error" id="leadError" role="alert" hidden></p>
+        <button class="btn btn--primary btn--block" type="submit">Получить расчёт</button>
+        <p class="quiz__done" id="leadDone" hidden><b>Спасибо!</b> Это демо-режим: в рабочей версии заявка уйдёт менеджеру.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contacts">
+  <div class="container footer__grid">
+    <div>
+      <img src="assets/img/logo.svg" alt="SmartWall" width="214" height="60">
+      <a class="footer__phone" href="tel:+74997558845">+7 (499) 755-88-45</a>
+      <a class="btn btn--ghost btn--sm" href="#lead">Обратный звонок</a>
+      <p class="footer__copy">© 2010–2026 Smart-Wall</p>
+    </div>
+    <div>
+      <h4>Услуги</h4>
+      <a href="#">Консультация</a><a href="#">Дизайн</a><a href="#">Производство</a><a href="#">Монтаж</a><a href="#">Гарантии</a>
+    </div>
+    <div>
+      <h4>Компания</h4>
+      <a href="#">FAQ</a><a href="#">Сертификаты</a><a href="#">Оплата</a><a href="#">Доставка</a><a href="#">Контакты</a>
+    </div>
+    <div>
+      <h4>Офис в Москве</h4>
+      <p>Бережковская набережная, д.16А стр. 2<br><a href="tel:+74997558845">+7 (499) 755-88-45</a><br><a href="mailto:Info@smart-wall.ru">Info@smart-wall.ru</a></p>
+      <h4>Производство</h4>
+      <p>142030, Московская обл., Домодедовский район, село Ям<br><a href="tel:+74997558845">+7 (499) 755-88-45</a></p>
+    </div>
+  </div>
+  <div class="container footer__legal"><a href="#">Политика конфиденциальности</a></div>
+</footer>
+
+<!-- mobile sticky action bar -->
+<div class="mbar">
+  <a class="btn btn--outline btn--sm" href="tel:+74997558845">Позвонить</a>
+  <a class="btn btn--primary btn--sm" href="#lead">Рассчитать</a>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
