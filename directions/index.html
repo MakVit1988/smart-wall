@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SmartWall — три направления визуала</title>
+  <style>
+    :root { --ink: #16191d; --muted: #656c74; --line: #dfe2e5; --bg: #f6f7f8; --accent: #1e6fd9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+    header { padding: 48px 0 24px; }
+    h1 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 12px; letter-spacing: -.02em; }
+    header p { max-width: 760px; color: var(--muted); font-size: 17px; margin: 0; }
+    .tbd { font-style: normal; font-size: 12px; color: #8a5a00; background: #fff3d6; border: 1px dashed #d9a441; border-radius: 4px; padding: 1px 6px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 24px 0 8px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+    .card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
+    .card__b { padding: 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .tag { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+    h2 { margin: 0; font-size: 24px; letter-spacing: -.01em; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .pal { display: flex; gap: 6px; }
+    .pal i { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(0,0,0,.12); }
+    .fonts { font-size: 13px; color: var(--muted); }
+    ul { margin: 0; padding-left: 18px; font-size: 14px; }
+    li + li { margin-top: 4px; }
+    .links { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; padding-top: 8px; }
+    .btn { display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid var(--ink); color: var(--ink); }
+    .btn--p { background: var(--ink); color: #fff; }
+    section.cmp { padding: 40px 0 8px; }
+    section.cmp h2 { margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: 14px; }
+    th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { background: #eef0f2; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+    td:first-child { font-weight: 600; width: 22%; }
+    .scroll { overflow-x: auto; }
+    .rec { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; padding: 18px 22px; margin: 28px 0; }
+    .rec h2 { font-size: 19px; margin-bottom: 8px; }
+    footer { padding: 24px 0 56px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 960px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SmartWall: три направления визуала</h1>
+    <p>Одна и та же главная страница в трёх разных образах. Содержимое одинаковое: герой, ключевые цифры, каталог с ценой, сроком, гарантией и звукоизоляцией, калькулятор-ориентир, отделки, проекты, процесс, заявка. Метки <i class="tbd">уточнить</i> — данные, которые должна подтвердить компания.</p>
+  </header>
+
+  <div class="grid">
+    <article class="card">
+      <img src="previews/a-hero.jpg" alt="Направление A">
+      <div class="card__b">
+        <span class="tag">Направление A</span>
+        <h2>Архитектурный минимализм</h2>
+        <p>Крупные фото объектов, белый и графит, один синий акцент из логотипа. Каталог — как строгая таблица.</p>
+        <div class="pal"><i style="background:#121417"></i><i style="background:#f5f5f3"></i><i style="background:#1e88ff"></i><i style="background:#fff"></i></div>
+        <div class="fonts">Шрифт: Onest (лёгкий, заголовки 300)</div>
+        <ul>
+          <li><b>Плюс:</b> выглядит дорого, максимально далеко от синего и золотого Foldin</li>
+          <li><b>Риск:</b> нужны крупные качественные фото (почти все сейчас 360–930 px)</li>
+        </ul>
+        <div class="links"><a class="btn btn--p" href="a-architectural.html">Открыть макет</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="previews/b-hero.jpg" alt="Направление B">
+      <div class="card__b">
+        <span class="tag">Направление B</span>
+        <h2>Тёплый материал</h2>
+        <p>Слоновая кость и терракота, серифные заголовки, арочные рамки. Акцент на отделках: шпон, ткань, цвета RAL.</p>
+        <div class="pal"><i style="background:#f5efe6"></i><i style="background:#b5573a"></i><i style="background:#a8794a"></i><i style="background:#2b1f18"></i></div>
+        <div class="fonts">Шрифты: Cormorant + Golos Text</div>
+        <ul>
+          <li><b>Плюс:</b> выделяет среди «стеклянных» конкурентов, тёплая подача для школ, отелей, квартир</li>
+          <li><b>Риск:</b> нужны фото реальных образцов отделок; для строгого B2B может быть «мягким»</li>
+        </ul>
+        <div class="links"><a class="btn btn--p" href="b-material.html">Открыть макет</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <img src="previews/c-hero.jpg" alt="Направление C">
+      <div class="card__b">
+        <span class="tag">Направление C</span>
+        <h2>Технологичный</h2>
+        <p>Тёмная тема, схема потолочного трека, крупные цифры дБ, сравнение систем полосками.</p>
+        <div class="pal"><i style="background:#0a0f18"></i><i style="background:#111a28"></i><i style="background:#3ad1ff"></i><i style="background:#dbe4f0"></i></div>
+        <div class="fonts">Шрифты: Unbounded + IBM Plex Sans / Mono</div>
+        <ul>
+          <li><b>Плюс:</b> подчёркивает инженерность и собственное производство, не требует больших фото</li>
+          <li><b>Риск:</b> холодный образ, хуже для жилого сегмента и школ</li>
+        </ul>
+        <div class="links"><a class="btn btn--p" href="c-tech.html">Открыть макет</a></div>
+      </div>
+    </article>
+  </div>
+
+  <section class="cmp">
+    <h2>Сравнение</h2>
+    <div class="scroll"><table>
+      <tr><th></th><th>A. Архитектурный</th><th>B. Тёплый материал</th><th>C. Технологичный</th></tr>
+      <tr><td>Образ</td><td>Галерея, премиум</td><td>Дом, материал, ремесло</td><td>Инженерия, точность</td></tr>
+      <tr><td>Что продаёт</td><td>Результат в интерьере</td><td>Выбор материала и цвета</td><td>Характеристики и надёжность</td></tr>
+      <tr><td>Зависимость от фото</td><td>Высокая</td><td>Средняя (нужны образцы)</td><td>Низкая</td></tr>
+      <tr><td>Отличие от Foldin (синий + золото, Jost)</td><td>Сильное</td><td>Среднее (тёплая гамма, но терракота, не золото)</td><td>Сильное</td></tr>
+      <tr><td>Лучше всего для</td><td>Офисы, бизнес-центры, архитекторы</td><td>Школы, отели, квартиры, дизайнеры</td><td>Производственные и IT-клиенты, тендеры</td></tr>
+      <tr><td>Каталог</td><td>Таблица со строками и миниатюрами</td><td>Карточки с крупным фото</td><td>Таблица с полосками дБ</td></tr>
+    </table></div>
+  </section>
+
+  <div class="rec">
+    <h2>Рекомендация</h2>
+    <p>Направление <b>A</b> как основа (строгий и дорогой образ, подходит главной аудитории: офисы и бизнес-центры), блок «Отделки» взять из <b>B</b>, а таблицу сравнения звукоизоляции и схему трека — из <b>C</b>. Всё это уже есть в трёх макетах и может быть собрано в один.</p>
+  </div>
+
+  <footer>Макеты статические: калькулятор считает ориентир по ценам «от» с текущего сайта, формы не отправляют данные, фото и логотипы взяты с smart-wall.ru. Срок ответа, сроки производства и гарантия — заглушки до подтверждения компанией.</footer>
+</div>
+</body>
+</html>
