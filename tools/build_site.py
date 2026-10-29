@@ -4,7 +4,7 @@
 Читает tools/data/*.json (контент smart-wall.ru) и собирает статический сайт в site/.
 Запуск: python3 tools/build_site.py
 """
-import json, re, os, html, shutil
+import json, re, os, sys, html, shutil
 from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -18,6 +18,12 @@ for _q in data['faq']:  # в исходных данных к последнем
         if _line.startswith('Оставьте заявку'):
             _q['a'] = _q['a'][:_i]; break
 E = lambda s: html.escape(str(s), quote=True)
+sys.path.insert(0, os.path.join(ROOT, 'tools', 'texts'))
+import products as _pt, categories_apps as _ct, info as _it, articles as _at
+TEXTS = {}
+TEXTS.update(_ct.TEXT); TEXTS.update(_it.TEXT)
+PRODUCT_TEXT = _pt.PRODUCT_TEXT
+ARTICLES = _at.ARTICLES
 
 PHONE = '+7 (499) 755-88-45'
 PHONE_HREF = 'tel:+74997558845'
@@ -37,13 +43,14 @@ PRODUCTS = [
     dict(slug='smartwall-h7k', code='H7K', cat='zvukoizoljacionnye-gluhie', tags='solid quiet', price=30877,
          sub='Акустические раздвижные стены для дома и офиса', img='p-h7k.jpg', sound='46 дБ',
          specs=[('Звукоизоляция', '46 дБ'), ('Заполнение секций', 'ЛДСП, шпон, МДФ окрашенный, пластик, ткань, магнитно-маркерная поверхность'),
-                ('Высота, толщина, вес', None)]),
+                ('Высота секций', '2000–6000 мм'), ('Толщина', '98 мм'), ('Вес 1 м²', '39 кг')]),
     dict(slug='smartwall-h5', code='H5', cat='zvukoizoljacionnye-gluhie', tags='solid', price=21872,
          sub='Акустические раздвижные стены для дома и офиса', img='cat-gluhie', sound='44 дБ',
          specs=[('Звукоизоляция', '44 дБ'), ('Максимальная высота', '4 м'), ('Толщина', '85, 123 мм'), ('Вес 1 м²', '29–62 кг'), ('Управление', 'механика')]),
     dict(slug='smartwall-h5k', code='H5K', cat='zvukoizoljacionnye-gluhie', tags='solid', price=21872,
          sub='Акустические раздвижные стены для потолков до 4 м', img='p-h5k.jpg', sound='42 дБ',
          specs=[('Звукоизоляция', 'до 42 дБ'), ('Высота потолков', 'до 4 м'), ('Профиль', 'алюминиевый по периметру секций'),
+                ('Толщина', '85 мм'), ('Вес 1 м²', '25 кг'),
                 ('Заполнение секций', 'ЛДСП, МДФ, шпон, ткани, обои и другие материалы'), ('Двери', 'установка двери невозможна')]),
     dict(slug='smartwall-h5f', code='H5F', cat='zvukoizoljacionnye-gluhie', tags='solid', price=26790,
          sub='Огнестойкие акустические стены из панелей СМЛ', img='p-h5f.jpg', sound='42–50 дБ',
@@ -213,7 +220,53 @@ def regroup(h):
         return ''.join('<p>%s</p>' % o for o in out)
     return re.sub(r'<p>(.*?)</p>', split_p, h, flags=re.S)
 
+SPEC_ROWS = [
+    ('H5', '42', '100', '35', 'да', 'да', '900–1250', '2000–4000', 'да', 'нет', '2350'),
+    ('H5K', '36', '85', '25', 'да', 'да', '900–1250', '2000–4000', 'нет', 'нет', '—'),
+    ('H7', '46–50', '113', '39', 'да', 'да', '900–1250', '2000–6000', 'да', 'да', '2350 / 2500'),
+    ('H7K', '46–50', '98', '39', 'да', 'да', '900–1250', '2000–6000', 'да', 'да', '2350 / 2500'),
+    ('G5', 'не регламентируется', '10–12', '35', 'нет', 'да', '800–1200', '2000–3500', 'да', 'нет', '2000'),
+    ('H5F', '36', '85', '25', 'да', 'да', '900–1250', '2000–4000', 'нет', 'нет', '—'),
+    ('WG5', '41', '85', '45', 'нет', 'да', '900–1250', '2000–3000', 'да', 'нет', '2350'),
+]
+def spec_table():
+    head = ['Система', 'Звукоизоляция, дБ', 'Толщина, мм', 'Вес, кг/м²', '1 ролик', '2 ролика', 'Ширина панели, мм', 'Высота панели, мм', 'Дверь 1-створч.', 'Дверь 2-створч.', 'Мин. высота с дверью, мм']
+    return ('<table><thead><tr>%s</tr></thead><tbody>%s</tbody></table>'
+            % (''.join('<th>%s</th>' % h for h in head), ''.join('<tr><td><b>SmartWall %s</b></td>%s</tr>' % (r[0], ''.join('<td>%s</td>' % c for c in r[1:])) for r in SPEC_ROWS)))
+
+def orig_images(path, ctx, minkb=20, limit=9):
+    h = content.get(path, {}).get('html', '')
+    out = []
+    for src, alt in re.findall(r'<img src="([^"]*)" alt="([^"]*)">', h):
+        fn = photo(src)
+        if not fn: continue
+        fp = os.path.join(OUT, 'assets', 'photos', fn)
+        if os.path.exists(fp) and os.path.getsize(fp) >= minkb * 1024 and fn not in [o[0] for o in out]: out.append((fn, alt))
+    if not out: return ''
+    return '<div class="pgal">%s</div>' % ''.join('<figure><img src="%s" alt="%s" loading="lazy"></figure>' % (ctx.img(fn), E(alt)) for fn, alt in out[:limit])
+
+ORDER_STEPS = [
+    ('Консультация', 'Менеджер выясняет задачу и помогает выбрать систему и отделку.'),
+    ('Замер', 'Специалист выезжает на объект, снимает размеры и оценивает нагрузку на потолок.'),
+    ('Проект и расчёт', 'Дизайн-проект с визуализацией и точная смета. Договор с графиком работ; авансовый платёж 70%% %s.' % '<i class="tbd">подтвердить</i>'),
+    ('Производство', 'Изделия делают на собственном производстве в Московской области.'),
+    ('Доставка и монтаж', 'Изделия приходят готовыми к установке, монтаж занимает один рабочий день.'),
+    ('Сервис', 'Гарантия по договору и послегарантийное обслуживание.'),
+]
+def common_blocks(ctx):
+    steps = ''.join('<li><b>%s.</b> %s</li>' % (t, d) for t, d in ORDER_STEPS)
+    return ('<h2>Как проходит заказ</h2><ol>%s</ol><h2>Частые вопросы</h2>%s<p><a href="%s">Все вопросы и ответы</a></p>'
+            % (steps, faq_block(data['faq'], 4), ctx.link('faq')))
+
+COMMON_PAGES = APPSET | {c[0] for c in CATS} | {t[0] for t in TYPES_SEO}
+
 def prose_html(path, ctx):
+    if path in TEXTS:
+        h = TEXTS[path]
+        if path == 'kak-jeto-rabotaet': h += spec_table() + '<p class="note">Данные таблицы расходятся с карточками систем и сайтом NAYADA %s.</p>' % '<i class="tbd">сверить</i>' + orig_images(path, ctx, 30, 9)
+        elif path in ('vidy-otdelok', 'sertifikaty', 'proizvodstvo'): h += orig_images(path, ctx, 25, 12)
+        if path in COMMON_PAGES: h += common_blocks(ctx)
+        return h
     d = content.get(path)
     if not d: return ''
     h = re.sub(r'\[/?caption[^\]]*\]', '', d['html'])
@@ -226,12 +279,12 @@ def page_title(path):
     d = content.get(path)
     return d['h1'] if d else path
 
-def crumbs(ctx, items):
+def crumbs(ctx, items, plain=False):
     out = ['<a href="%s">Главная</a>' % ctx.link('')]
     for label, target in items:
         out.append('<i>/</i>')
         out.append('<a href="%s">%s</a>' % (ctx.link(target), E(label)) if target is not None else '<span>%s</span>' % E(label))
-    return '<nav class="crumbs" aria-label="Навигация">%s</nav>' % ''.join(out)
+    return '<nav class="crumbs%s" aria-label="Навигация">%s</nav>' % (' crumbs--plain' if plain else '', ''.join(out))
 
 NAV = [('produkciya', 'Системы'), ('primenenie', 'Где применяют'), ('projects', 'Проекты'), ('vidy-otdelok', 'Отделки'), ('about', 'Компания'), ('kontakty', 'Контакты')]
 
@@ -282,9 +335,28 @@ def layout(path, title, body, over=False, desc=''):
             % (E(title), E(desc), ctx.asset('img/logo-dark.svg'), ctx.asset('css/site.css'), header(ctx, over), body, footer(ctx),
                PHONE_HREF, ctx.link('kalkulyator'), ctx.asset('js/site.js')))
 
-def pagehead(ctx, h1, crumb_items, lead='', long=False, extra=''):
-    return ('<section class="pagehead%s"><div class="wrap">%s<div class="pagehead__row"><div><h1>%s</h1>%s</div>%s</div></div></section>'
-            % (' pagehead--long' if long else '', crumbs(ctx, crumb_items), E(h1), ('<p class="lead">%s</p>' % lead) if lead else '', extra))
+HEAD_DEFAULT = ['hero.jpg', 'pr-olimp.jpg', 'a-bc.jpg', 'pr-cbre.jpg', 'a-conf.jpg', 'a-office.jpg', 'a-school.jpg']
+def head_img(path):
+    for slug, name, img in APPS:
+        if slug == path: return img
+    if path.startswith('products/') and path.split('/')[1] in PBYSLUG:
+        pr = PBYSLUG[path.split('/')[1]]
+        return catimg(pr['img']) if pr['img'].startswith('cat-') else pr['img']
+    for c in CATS:
+        if c[0] == path:
+            pr = [x for x in PRODUCTS if x['cat'] == path][0]
+            return catimg(pr['img']) if pr['img'].startswith('cat-') else pr['img']
+    if path.startswith('projects/'):
+        for pr in PROJECTS:
+            if pr['path'] == path and pr['cover']: return pr['cover']
+    if path in ('projects', 'otzyvy'): return 'pr-olimp.jpg'
+    if path in ('produkciya', 'kalkulyator'): return 'hero.jpg'
+    return HEAD_DEFAULT[sum(ord(ch) for ch in path) % len(HEAD_DEFAULT)]
+
+def pagehead(ctx, h1, crumb_items, lead='', long=False, extra='', img=None):
+    bg = img or head_img(ctx.path)
+    return ('<section class="pagehead%s"><img class="pagehead__bg" src="%s" alt=""><div class="wrap">%s<div class="pagehead__row"><div><h1>%s</h1>%s</div>%s</div></div></section>'
+            % (' pagehead--long' if long else '', ctx.img(bg), crumbs(ctx, crumb_items), E(h1), ('<p class="lead">%s</p>' % lead) if lead else '', extra))
 
 def form(ctx, product='', idp='f', consent_link=True):
     return ('<form class="form" data-lead novalidate><input type="hidden" name="product" value="%s">'
@@ -384,6 +456,16 @@ def side(ctx, path):
     return ('<aside class="side"><div class="side__cta"><p>Рассчитаем стоимость и приедем на замер бесплатно.</p><a class="btn btn--light" href="%s">Рассчитать стоимость</a></div></aside>'
             % ctx.link('kalkulyator'))
 
+def rside(ctx, path):
+    ps = projects_for_app(path)[:2] if path in APPSET else []
+    if len(ps) < 2: ps = ps + [p for p in PROJECTS if p['slug'] in ('bolshoj-teatr', 'konsaltingovaja-kompanija-cbre', 'ofis-mail-ru') and p not in ps][:2 - len(ps)]
+    tiles = ''.join(proj_tile(ctx, p) for p in ps)
+    facts = ('<div class="rside__card"><h4>Коротко о системах</h4><ul><li>секции движутся по потолочному треку, пол не затрагивается</li><li>звукоизоляция до 54 дБ</li>'
+             '<li>в секции можно встроить дверь</li><li>монтаж возможен без остановки работы офиса</li></ul></div>')
+    card = ('<div class="rside__card"><h4>Связаться</h4><a class="tel" href="%s">%s</a><p>пн–пт 09:00–18:00</p><p><a class="link" href="%s">Рассчитать стоимость</a></p></div>'
+            % (PHONE_HREF, PHONE, ctx.link('kalkulyator')))
+    return '<aside class="rside">%s%s%s</aside>' % (tiles, facts, card)
+
 def group_name(path):
     for name, slugs in GROUPS:
         if path in slugs: return name
@@ -423,7 +505,7 @@ def html_page_generic(path):
     if path in [t[0] for t in TYPES_SEO]:
         extra = '<section class="sec"><div class="wrap">%s%s</div></section>' % (sec_head('', 'Системы SmartWall', 'Шесть основных систем: от цельного стекла до акустических панелей.'), rows_table(ctx, PRODUCTS[:6]))
     prose = prose_html(path, ctx)
-    body += '<div class="wrap page">%s<div class="prose">%s</div></div>' % (side(ctx, path), prose)
+    body += '<div class="wrap page page--3">%s<div class="prose">%s</div>%s</div>' % (side(ctx, path), prose, rside(ctx, path))
     body += extra + lead_section(ctx, paper=bool(extra) is False)
     return layout(path, d['title'] or d['h1'], body, desc=d['desc'])
 
@@ -437,24 +519,45 @@ def page_home():
     facts = ('<section class="facts"><div class="facts__i"><b>до 54 дБ</b><span>звукоизоляция системы H7</span></div>'
              '<div class="facts__i"><b>3000+</b><span>реализованных проектов%s</span></div><div class="facts__i"><b>2009</b><span>собственное производство</span></div>'
              '<div class="facts__i"><b>от 21 872 ₽</b><span>за м² — цены на сайте</span></div></section>' % TBD)
-    systems = ('<section class="sec" id="systems"><div class="wrap">%s%s<p class="note">Метки «уточнить» — данные, которые должна подтвердить компания (сроки производства и гарантия).</p>'
+    systems = ('<section class="sec sec--white" id="systems"><div class="wrap">%s%s<p class="note">Метки «уточнить» — данные, которые должна подтвердить компания (сроки производства и гарантия).</p>'
                '<p class="more"><a class="btn btn--line" href="%s">Все системы и фильтры</a></p></div></section>'
                % (sec_head('01', 'Системы', 'Шесть основных систем для разных задач: от цельного стекла до акустических панелей с максимальной изоляцией.'), rows_table(ctx, PRODUCTS[:6]), ctx.link('produkciya')))
-    finishes = '<section class="sec sec--paper"><div class="wrap">%s%s</div></section>' % (sec_head('03', 'Отделки', 'Панели заполняются тем, что подходит интерьеру. Подберём материал и цвет под ваш проект.'), mats_block(ctx))
-    big = [p for p in PROJECTS if p['slug'] in ('shkola-olimp', 'bolshoj-teatr', 'konsaltingovaja-kompanija-cbre')]
-    big.sort(key=lambda p: ['shkola-olimp', 'bolshoj-teatr', 'konsaltingovaja-kompanija-cbre'].index(p['slug']))
-    projects = ('<section class="sec" id="projects"><div class="wrap">%s<div class="projbig">%s</div>%s<p class="more"><a class="btn btn--line" href="%s">Все проекты</a></p></div></section>'
-                % (sec_head('04', 'Проекты', 'Большой театр, Mail.ru, CBRE, Афимолл Сити — и более 3000 объектов%s.' % TBD), ''.join(proj_tile(ctx, p) for p in big), logos(ctx), ctx.link('projects')))
-    areas = '<section class="sec sec--paper"><div class="wrap">%s%s<p class="more"><a class="btn btn--line" href="%s">Все области применения</a></p></div></section>' % (
-        sec_head('05', 'Где применяют', 'Офисы, бизнес-центры, школы, гостиницы, театры, спортивные залы и частные интерьеры.'), apps_tiles(ctx, APPS[:8], 'tiles tiles--4'), ctx.link('primenenie'))
+    pr = [('01', 'Секции', 'Лёгкие рамы из алюминиевого профиля. Внутри — акустический наполнитель, стекло или их сочетание.'),
+          ('02', 'Ролики и трек', 'Секции висят на роликах и едут по направляющей в потолке. Пол остаётся целым, напольное покрытие не вскрывают.'),
+          ('03', 'Стык', 'Торцы смыкаются по системе «шип-паз», а уплотнители и магнитная лента закрывают щели: от них зависят децибелы.'),
+          ('04', 'Паркинг', 'Открытая стена собирается в нише, у стены или в соседней комнате и освобождает весь зал.')]
+    principle = ('<section class="sec sec--dark"><div class="wrap">%s<div class="steps4">%s</div><p class="more"><a class="btn btn--line" href="%s">Подробнее о принципе работы</a></p></div></section>'
+                 % (sec_head('02', 'Как работает перегородка', 'Четыре узла, из которых складывается стена, исчезающая по команде.'),
+                    ''.join('<div><b>%s</b><h3>%s</h3><p>%s</p></div>' % x for x in pr), ctx.link('kak-jeto-rabotaet')))
+    band = ('<section class="band"><img class="band__bg" src="%s" alt=""><div class="band__in"><h2>Один зал — два помещения, и обратно</h2>'
+            '<p>Секции складываются в паркинг за считанные минуты. В закрытом виде перегородка выглядит как капитальная стена, в открытом — освобождает весь зал.</p>'
+            '<a class="btn btn--light" href="%s">Рассчитать стоимость</a></div></section>' % (ctx.img('pr-olimp.jpg'), ctx.link('kalkulyator')))
+    finishes = '<section class="sec sec--paper"><div class="wrap">%s%s</div></section>' % (sec_head('04', 'Отделки', 'Панели заполняются тем, что подходит интерьеру. Подберём материал и цвет под ваш проект.'), mats_block(ctx))
+    order = ['shkola-olimp', 'bolshoj-teatr', 'konsaltingovaja-kompanija-cbre']
+    big = sorted([p for p in PROJECTS if p['slug'] in order], key=lambda p: order.index(p['slug']))
+    projects = ('<section class="sec sec--dark" id="projects"><div class="wrap">%s<div class="projbig">%s</div>%s<p class="more"><a class="btn btn--line" href="%s">Все проекты</a></p></div></section>'
+                % (sec_head('05', 'Проекты', 'Большой театр, Mail.ru, CBRE, Афимолл Сити — и более 3000 объектов%s.' % TBD.replace('<i class="tbd">', '<i class="tbd tbd--l">')), ''.join(proj_tile(ctx, p) for p in big), logos(ctx), ctx.link('projects')))
+    areas = ('<section class="sec" style="padding-bottom:0"><div class="wrap">%s</div></section><div class="mosaic">%s</div>'
+             % (sec_head('06', 'Где применяют', 'Офисы, бизнес-центры, школы, гостиницы, театры, спортивные залы и частные интерьеры.'), ''.join(tile(ctx, ctx.link(sl), im, nm) for sl, nm, im in APPS[:8])))
+    rs = [('Собственное производство', 'Профиль, панели, направляющие и отделку выпускаем сами в Домодедовском районе Московской области.'),
+          ('Полный цикл', 'Дизайн-проект, изготовление, доставка, монтаж и сервис — в одной команде, без передачи между подрядчиками.'),
+          ('Монтаж за один день', 'Изделия приходят готовыми, на объекте ничего не режут и не подгоняют. Работа офиса продолжается.'),
+          ('Без перепланировки', 'Для установки не нужно согласование перепланировки, а перегородку можно переставить или убрать.'),
+          ('Отделка под проект', 'Шпон, ЛДСП EGGER, окраска по RAL, ткань, стекло и магнитно-маркерные поверхности — под ваш интерьер.'),
+          ('Двери и стекло в секциях', 'В полотно встраивают двери, а чтобы добавить света, часть секций заменяют стеклянными.')]
+    reasons = ('<section class="sec sec--paper"><div class="wrap">%s<div class="reasons">%s</div></div></section>'
+               % (sec_head('07', 'Почему SmartWall', 'Шесть причин, по которым нас выбирают для офисов, школ, отелей и частных интерьеров.'),
+                  ''.join('<div><h3>%s</h3><p>%s</p></div>' % x for x in rs)))
     revs = data['reviews'][:2]
     reviews = ('<section class="sec"><div class="wrap">%s<div class="reviews">%s</div><p class="more"><a class="btn btn--line" href="%s">Все отзывы</a></p></div></section>'
-               % (sec_head('06', 'Отзывы клиентов'), ''.join(
+               % (sec_head('08', 'Отзывы клиентов'), ''.join(
                    '<figure class="rev"><div class="rev__h"><img src="%s" alt="%s" loading="lazy"><div><b>%s</b><span>%s</span></div></div><p>%s</p></figure>' % (
                        ctx.img(photo(r['logo'])), E(r['company']), E(r['company']), E(r['role']), E(r['text'])) for r in revs), ctx.link('otzyvy')))
-    faq = '<section class="sec sec--paper"><div class="wrap">%s%s<p class="more"><a class="link" href="%s">Все вопросы и ответы</a></p></div></section>' % (
-        sec_head('07', 'Частые вопросы'), faq_block(data['faq'], 5), ctx.link('faq'))
-    body = hero + facts + systems + calc_block(ctx) + finishes + projects + areas + quiz_block(ctx) + reviews + faq + lead_section(ctx, paper=False)
+    arts = ('<section class="sec" style="padding-bottom:0"><div class="wrap">%s</div></section>%s'
+            % (sec_head('09', 'Статьи', 'Как выбрать систему, стекло и отделку, на что смотреть при монтаже и акустике.'), art_cards(ctx, ARTICLES[:3])))
+    faq = '<section class="sec"><div class="wrap">%s%s<p class="more"><a class="link" href="%s">Все вопросы и ответы</a></p></div></section>' % (
+        sec_head('10', 'Частые вопросы'), faq_block(data['faq'], 5), ctx.link('faq'))
+    body = hero + facts + systems + principle + band + calc_block(ctx, idx='03') + finishes + projects + areas + reasons + quiz_block(ctx) + reviews + arts + faq + lead_section(ctx, paper=True)
     return layout('', 'Smart Wall | Системы раздвижных перегородок', body, over=True, desc='Раздвижные перегородки SmartWall для зонирования пространства: глухие, стеклянные, комбинированные. Собственное производство. ' + PHONE)
 
 def page_produkciya():
@@ -480,6 +583,7 @@ def page_product(p):
                 r'Звукоизоляция\s*[-–]?\s*(?:до\s*)?\d+\s*Дб(?: по российскому стандарту)?\.?\s*', r'Максимальная высота\s*3\s*м\.\s*']
     for c in cleaners: h = re.sub(c, '', h)
     desc = regroup(fix_links(h, ctx))
+    if p['slug'] in PRODUCT_TEXT: desc = PRODUCT_TEXT[p['slug']] + common_blocks(ctx)
     main = photo(d['gallery'][0]) if d.get('gallery') else None
     primary = catimg(p['img']) if p['img'].startswith('cat-') else p['img']
     imgs = [primary]
@@ -491,14 +595,14 @@ def page_product(p):
     specs += '<tr><th>Срок производства</th><td>%s</td></tr><tr><th>Гарантия</th><td>%s</td></tr>' % (TBD, TBD)
     cat_name = [c[1] for c in CATS if c[0] == p['cat']][0]
     body = pagehead(ctx, 'SmartWall %s' % p['code'], [('Системы', 'produkciya'), (cat_name, p['cat']), ('SmartWall ' + p['code'], None)]) if False else ''
-    body = ('<section class="pagehead" style="border:0;padding-bottom:0"><div class="wrap">%s</div></section>' % crumbs(ctx, [('Системы', 'produkciya'), (cat_name, p['cat']), ('SmartWall ' + p['code'], None)]))
-    body += ('<section class="wrap prod"><div class="gal"><div class="gal__main"><img src="%s" alt="SmartWall %s"></div><div class="gal__thumbs">%s</div></div>'
+    body = ('<section class="prod-wrap"><div class="wrap" style="padding-top:28px">%s</div></section>' % crumbs(ctx, [('Системы', 'produkciya'), (cat_name, p['cat']), ('SmartWall ' + p['code'], None)], plain=True))
+    body += ('<section class="prod-wrap"><div class="wrap prod"><div class="gal"><div class="gal__main"><img src="%s" alt="SmartWall %s"></div><div class="gal__thumbs">%s</div></div>'
              '<div class="prod__info"><h1>SmartWall %s</h1><p class="prod__sub">%s</p><p class="prod__price"><small>от</small> %s ₽/м²</p>'
              '<div class="prod__cta"><a class="btn btn--dark" href="#calc">Рассчитать стоимость</a><a class="btn btn--line" href="#lead">Заказать замер</a></div>'
-             '<table class="specs">%s</table></div></section>'
+             '<table class="specs">%s</table></div></div></section>'
              % (ctx.img(imgs[0]), p['code'], thumbs, p['code'], E(p['sub']), '{:,}'.format(p['price']).replace(',', ' '), specs))
-    body += '<section class="sec sec--paper"><div class="wrap page" style="padding-top:0;padding-bottom:0"><aside class="side"><h4>Другие системы</h4><ul>%s</ul></aside><div class="prose"><h2>Описание</h2>%s</div></div></section>' % (
-        ''.join('<li><a href="%s"%s>SmartWall %s</a></li>' % (ctx.link('products/' + q['slug']), ' aria-current="page"' if q is p else '', q['code']) for q in PRODUCTS), desc or '<p>Подробное описание системы готовит компания.</p>')
+    body += '<section class="sec sec--paper"><div class="wrap page" style="padding-top:0;padding-bottom:0"><aside class="side"><h4>Другие системы</h4><ul>%s</ul></aside><div class="prose">%s</div></div></section>' % (
+        ''.join('<li><a href="%s"%s>SmartWall %s</a></li>' % (ctx.link('products/' + q['slug']), ' aria-current="page"' if q is p else '', q['code']) for q in PRODUCTS), desc or '<h2>Описание</h2><p>Подробное описание системы готовит компания.</p>')
     body += calc_block(ctx, selected=p['code'])
     ps = [x for x in PROJECTS if p['code'] in x['codes']]
     if ps:
@@ -509,9 +613,9 @@ def page_product(p):
 def page_projects():
     ctx = Ctx('projects')
     types = sorted(set(p['type'] for p in PROJECTS))
-    flt = '<div class="filters" data-target=".tiles .tile" data-count="#pcount"><button class="is-on" data-f="all">Все</button>%s</div>' % ''.join('<button data-f="%s">%s</button>' % (TYPE_KEY[t], t) for t in types)
+    flt = '<div class="filters" data-target=".mosaic .tile" data-count="#pcount"><button class="is-on" data-f="all">Все</button>%s</div>' % ''.join('<button data-f="%s">%s</button>' % (TYPE_KEY[t], t) for t in types)
     body = pagehead(ctx, 'Проекты', [('Проекты', None)], 'Офисы, торговые центры, гостиницы, театры, вузы, школы и детские сады: как решена задача зонирования в каждом конкретном случае.')
-    body += '<section class="sec"><div class="wrap">%s<p class="note" style="margin:-16px 0 24px">Показано проектов: <b id="pcount">%d</b></p><div class="tiles">%s</div></div></section>' % (flt, len(PROJECTS), ''.join(proj_tile(ctx, p) for p in PROJECTS))
+    body += '<section class="sec" style="padding-bottom:0"><div class="wrap">%s<p class="note" style="margin:-16px 0 24px">Показано проектов: <b id="pcount">%d</b></p></div></section><div class="mosaic mosaic--3">%s</div>' % (flt, len(PROJECTS), ''.join(proj_tile(ctx, p) for p in PROJECTS))
     body += lead_section(ctx)
     return layout('projects', 'Проекты раздвижных перегородок SmartWall', body)
 
@@ -540,7 +644,7 @@ def page_project(p):
 def page_primenenie():
     ctx = Ctx('primenenie')
     body = pagehead(ctx, 'Где применяют перегородки SmartWall', [('Где применяют', None)], 'Офисы, торговые и бизнес-центры, гостиницы, образовательные и государственные учреждения, театры, спортивные центры и частные интерьеры.')
-    body += '<section class="sec"><div class="wrap">%s</div></section>' % apps_tiles(ctx, APPS)
+    body += '<div class="mosaic mosaic--3">%s</div>' % ''.join(tile(ctx, ctx.link(sl), im, nm) for sl, nm, im in APPS)
     body += lead_section(ctx)
     return layout('primenenie', 'Где применяют раздвижные перегородки SmartWall', body)
 
@@ -565,15 +669,29 @@ def page_article(path):
     body += lead_section(ctx)
     return layout(path, d['title'] or d['h1'], body, desc=d['desc'])
 
+def art_cards(ctx, items):
+    return '<div class="articles">%s</div>' % ''.join('<a href="%s"><small>%s</small><h3>%s</h3><p>%s</p><span>Читать →</span></a>' % (ctx.link('stati/' + a['slug']), E(a['tag']), E(a['title']), E(a['lead'])) for a in items)
+
 def page_stati():
     ctx = Ctx('stati')
     intro = ''.join(re.findall(r'<p>.*?</p>', content['stati']['html'], flags=re.S)[:3])
     intro = fix_links(intro, ctx)
     cards = ''.join(tile(ctx, ctx.link(c['href'].replace('https://smart-wall.ru/', '').strip('/')) if known(c['href'].replace('https://smart-wall.ru/', '').strip('/')) else '#', photo(c['img']), c['title']) for c in data['stati'] if photo(c['img']))
-    body = pagehead(ctx, 'Статьи о раздвижных перегородках', [('Знания', None), ('Статьи', None)])
-    body += '<div class="wrap page">%s<div><div class="prose">%s</div><div class="tiles" style="margin-top:40px;grid-template-columns:repeat(2,1fr)">%s</div></div></div>' % (side(ctx, 'stati'), intro, cards)
+    body = pagehead(ctx, 'Статьи о раздвижных перегородках', [('Знания', None), ('Статьи', None)], 'Как устроены системы, что учесть при выборе и монтаже, как подобрать стекло, отделку и звукоизоляцию.')
+    body += '<section class="sec" style="padding-bottom:0"><div class="wrap"><div class="prose" style="margin-bottom:40px">%s</div></div></section>' % intro
+    body += art_cards(ctx, ARTICLES)
+    body += '<section class="sec"><div class="wrap">%s</div></section><div class="mosaic mosaic--3">%s</div>' % (sec_head('', 'Разделы по типам перегородок'), cards)
     body += lead_section(ctx)
-    return layout('stati', content['stati']['title'], body)
+    return layout('stati', 'Статьи о раздвижных перегородках SmartWall', body)
+
+def page_art(a):
+    path = 'stati/' + a['slug']; ctx = Ctx(path)
+    others = [x for x in ARTICLES if x is not a][:3]
+    body = pagehead(ctx, a['title'], [('Статьи', 'stati'), (a['tag'], None)], long=True)
+    body += '<div class="wrap page page--3">%s<div class="prose">%s</div>%s</div>' % (side(ctx, 'stati'), a['html'], rside(ctx, path))
+    body += '<section class="sec sec--paper"><div class="wrap">%s</div></section>%s' % (sec_head('', 'Читайте также'), art_cards(ctx, others))
+    body += lead_section(ctx)
+    return layout(path, a['title'], body, desc=a['lead'])
 
 def page_otzyvy():
     ctx = Ctx('otzyvy')
@@ -626,6 +744,7 @@ def page_map():
               ('Проекты', [(p['path'], p['title']) for p in PROJECTS])]
     for name, slugs in GROUPS: groups.append((name, [(s, SHORT[s]) for s in slugs if known(s)]))
     arts = [(p, content[p]['h1']) for p in content if p.startswith('news/') and known(p)]
+    groups.append(('Статьи (новые)', [('stati/' + a['slug'], a['title']) for a in ARTICLES]))
     groups.append(('Новости и материалы', arts))
     groups.append(('Служебные', [('politika-konfidencialnosti', 'Политика конфиденциальности')]))
     body = pagehead(ctx, 'Карта прототипа', [('Карта прототипа', None)], 'Служебная страница: все страницы прототипа, сгруппированные по разделам.')
@@ -649,6 +768,7 @@ for path in content:
     if path in PAGES or path in SKIP or path.startswith('Info@') or path in ('home',): continue
     if path.startswith('news/'): add(path, (lambda path=path: page_article(path)))
     else: add(path, (lambda path=path: html_page_generic(path)))
+for _a in ARTICLES: add('stati/' + _a['slug'], (lambda a=_a: page_art(a)))
 # дубли новостей (две записи про 1С): оставляем первую
 add('news/1107', lambda: page_article('news/1107'))
 
