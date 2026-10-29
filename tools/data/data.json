@@ -1,0 +1,739 @@
+{
+ "projects": [
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/11/DSC1404.jpg",
+   "title": "Раздвижные перегородки в «Школа Олимп»",
+   "systems": "H5",
+   "href": "https://smart-wall.ru/projects/shkola-olimp/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/07/SHAT2553.jpg",
+   "title": "Раздвижные перегородки SmartWall в Большом Театре",
+   "systems": "Н7",
+   "href": "https://smart-wall.ru/projects/bolshoj-teatr/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/05/news-1991-6.jpg",
+   "title": "Трансформируемые перегородки SmartWall в «Банк Центр Кредит»",
+   "systems": "H5",
+   "href": "https://smart-wall.ru/projects/bank-v-kazahstane/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/05/news-2022-11.jpg",
+   "title": "Раздвижные перегородки в офисе компании Weatherford",
+   "systems": "H7",
+   "href": "https://smart-wall.ru/projects/prostranstvo-dlja-uspeshnyh-peregovorov-kompanii-weatherford/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/05/MG_0109.jpg",
+   "title": "Раздвижные перегородки в офисе компании MAIL.RU",
+   "systems": "H5",
+   "href": "https://smart-wall.ru/projects/ofis-mail-ru/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/05/img_47_993_a.jpg",
+   "title": "Раздвижные перегородки в БЦ «Президент»",
+   "systems": "H7",
+   "href": "https://smart-wall.ru/projects/bc-prezident-g-ekaterinburg/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/2441.jpg",
+   "title": "Перегородка SmartWall в офисе Алкогольной Сибирской Группы",
+   "systems": "H7K",
+   "href": "https://smart-wall.ru/projects/alkogolnaja-kompanija/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/news-2095-6.jpg",
+   "title": "Цельностеклянные и раздвижные перегородки в ТРЦ \"Афимолл Сити\"",
+   "systems": "G5",
+   "href": "https://smart-wall.ru/projects/smartwall-v-afimolle/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/MG_0331.jpg",
+   "title": "Трансформируемые перегородки в офисе компании Paulig",
+   "systems": "H5",
+   "href": "https://smart-wall.ru/projects/ofis-kompanii-paulig/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/news-2999-6.jpg",
+   "title": "Раздвижная система перегородок в консалтинговой компании CBRE",
+   "systems": "H7",
+   "href": "https://smart-wall.ru/projects/konsaltingovaja-kompanija-cbre/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/21.jpg",
+   "title": "Раздвижная система перегородок в БЦ «КРАСНЫЕ ХОЛМЫ»",
+   "systems": "Н7",
+   "href": "https://smart-wall.ru/projects/krasnye-holmy/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/03/Untitled_Panorama1.jpg",
+   "title": "Стеклянные раздвижные перегородки в офисе Itella Connexion",
+   "systems": "G5",
+   "href": "https://smart-wall.ru/projects/ofis-itella-connexion/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/03/MG_0045.jpg",
+   "title": "Система перегородок-трансформеров в офисе фирмы 1С",
+   "systems": "Н7",
+   "href": "https://smart-wall.ru/projects/kompanija-1s/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/08/IMG_0013_enfuse-1.jpg",
+   "title": "Раздвижные перегородки в школе в Некрасовском районе",
+   "systems": "H7, H7К",
+   "href": "https://smart-wall.ru/projects/shkola/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/08/IMG_4027-1.jpg",
+   "title": "Раздвижная перегородка в ХОЛЛИДЕЙ ИНН ЭКСПРЕСС ШЕРЕМЕТЬЕВО",
+   "systems": "H7",
+   "href": "https://smart-wall.ru/projects/hollidej-inn-jekspress-sheremetevo/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/07/IMG_0531-1.jpg",
+   "title": "Раздвижные перегородки в высших учебных заведениях",
+   "systems": "H7",
+   "href": "https://smart-wall.ru/projects/vysshee-uchebnoe-zavedenie/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2019/07/DSC4222-2.jpg",
+   "title": "Раздвижные звукоизоляционные перегородки в компании Мираторг",
+   "systems": "H5, H7",
+   "href": "https://smart-wall.ru/projects/miratorg/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/07/IMG_1814-1.jpg",
+   "title": "Трансформируемая перегородка БЦ \"Оазис\"",
+   "systems": "H7К",
+   "href": "https://smart-wall.ru/projects/biznes-centr-oazis/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/07/6d3da17d4bab637d96c5798006d923a4_720x1000-1.jpg",
+   "title": "Трансформируемые перегородки в офисе РОСБАНК",
+   "systems": "H5, H7",
+   "href": "https://smart-wall.ru/projects/rosbank-nizhnij-novgorod/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/07/3uqJe0VLzN0-1.jpg",
+   "title": "Раздвижные перегородки в танцевальной студии",
+   "systems": "H5",
+   "href": "https://smart-wall.ru/projects/tancevalnaja-studija/"
+  }
+ ],
+ "news": [
+  {
+   "date": "2023-05-05",
+   "img": "https://smart-wall.ru/wp-content/uploads/2023/05/смартволл.jpg",
+   "href": "https://smart-wall.ru/news/smartwall-pozdravljaet-vseh-s-9-maja-s-dnem-pobedy-v-velikoj-otechestvennoj-vojne/",
+   "title": "SmartWall поздравляет всех с 9 Мая, с Днем Победы в Великой Отечественной войне!"
+  },
+  {
+   "date": "2023-04-28",
+   "img": "https://smart-wall.ru/wp-content/uploads/2023/04/смартволл.jpg",
+   "href": "https://smart-wall.ru/news/smartwallpozdravljaet-vseh-s-1-maja-prazdnikom-vesny-i-truda/",
+   "title": "SmartWallпоздравляет всех с 1 Мая, Праздником Весны и Труда"
+  },
+  {
+   "date": "2023-03-07",
+   "img": "https://smart-wall.ru/wp-content/uploads/2023/03/смартволл.jpg",
+   "href": "https://smart-wall.ru/news/smartwall-pozdravljaet-vseh-zhenshhin-s-8-marta-s-prazdnikom-vesny/",
+   "title": "SmartWall поздравляет всех женщин с 8 марта - с праздником Весны!"
+  },
+  {
+   "date": "2023-02-22",
+   "img": "https://smart-wall.ru/wp-content/uploads/2023/02/превью_смартволл.jpg",
+   "href": "https://smart-wall.ru/news/smartwall-pozdravljaet-vseh-muzhchin-s-dnem-zashhitnika-otechestva/",
+   "title": "SmartWall поздравляет всех мужчин с Днем защитника Отечества"
+  },
+  {
+   "date": "2022-12-29",
+   "img": "https://smart-wall.ru/wp-content/uploads/2022/12/смартволл.jpg",
+   "href": "https://smart-wall.ru/news/pozdravljaem-s-novym-godom-2023/",
+   "title": "Поздравляем с Новым годом 2023!"
+  },
+  {
+   "date": "2022-08-12",
+   "img": "https://smart-wall.ru/wp-content/uploads/2022/08/смартволл.jpg",
+   "href": "https://smart-wall.ru/news/kompanija-smart-wall-pozdravljaet-s-dnem-stroitelja/",
+   "title": "Компания Smart Wall поздравляет с Днем строителя!"
+  },
+  {
+   "date": "2022-05-06",
+   "img": "https://smart-wall.ru/wp-content/uploads/2022/05/смартволл.jpg",
+   "href": "https://smart-wall.ru/news/pozdravljaem-s-prazdnikom-9-maja/",
+   "title": "Поздравляем с праздником 9 мая!"
+  },
+  {
+   "date": "2022-04-29",
+   "img": "https://smart-wall.ru/wp-content/uploads/2022/04/smartwall_1may_prev.jpg",
+   "href": "https://smart-wall.ru/news/smartwall-pozdravljaet-vseh-s-1-maja-s-prazdnikom-vesny-i-tepla/",
+   "title": "SmartWall поздравляет всех с 1 мая – с праздником весны и тепла!"
+  },
+  {
+   "date": "2022-03-05",
+   "img": "https://smart-wall.ru/wp-content/uploads/2022/03/smart-wall-1-2.jpg",
+   "href": "https://smart-wall.ru/news/kompanija-smartwall-pozdravljaet-vas-s-mezhdunarodnym-zhenskim-dnem/",
+   "title": "Компания SmartWall поздравляет вас с Международным женским днем!"
+  },
+  {
+   "date": "2022-02-22",
+   "img": "https://smart-wall.ru/wp-content/uploads/2022/02/smart.jpg",
+   "href": "https://smart-wall.ru/news/s-dnem-zashhitnika-otechestva/",
+   "title": "С Днем защитника Отечества"
+  },
+  {
+   "date": "2021-12-28",
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/12/NYcardSMARTWALL_2022_2.jpg",
+   "href": "https://smart-wall.ru/news/s-nastupajushhim-novym-2022-godom-i-rozhdestvom/",
+   "title": "С наступающим Новым 2022 годом и Рождеством!"
+  },
+  {
+   "date": "2020-11-09",
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/11/DSC1408.jpg",
+   "href": "https://smart-wall.ru/news/shkola-olimp/",
+   "title": "Монтаж перегородок в школе «ОЛИМП»"
+  },
+  {
+   "date": "2020-03-30",
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/03/MG_0045.jpg",
+   "href": "https://smart-wall.ru/news/kompaniya-1s/",
+   "title": "Монтаж перегородок в компании 1С"
+  },
+  {
+   "date": "2019-10-17",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/sw-Holiday-Inn-Express-Moscow.png",
+   "href": "https://smart-wall.ru/news/holiday-inn-express-moscow-ajeroport-sheremetevo/",
+   "title": "Монтаж перегородок в компании Holiday Inn Express Moscow- Аэропорт Шереметьево"
+  },
+  {
+   "date": "2019-10-17",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/sm-b1.jpg",
+   "href": "https://smart-wall.ru/news/kompanija-smartwall-prodolzhaet-aktivnoe-sotrudnichestvo-s-bankami/",
+   "title": "Компания SMARTWALL продолжает активное сотрудничество с банками"
+  },
+  {
+   "date": "2019-10-17",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/SW-6315.jpg",
+   "href": "https://smart-wall.ru/news/uchityvaja-rastushhuju-populjarnost-gorodskogo-zhilja-v-formate-studii-na-rynke-pojavljaetsja-potrebnost-v-razgranichenii-prostranstva-na-funkcionalnye-zony/",
+   "title": "Потребность в разграничении пространства на функциональные зоны"
+  },
+  {
+   "date": "2019-10-17",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/SW1.jpg",
+   "href": "https://smart-wall.ru/news/transformacija-obshhestvennyh-zdanij/",
+   "title": "Трансформация общественных зданий."
+  },
+  {
+   "date": "2019-10-17",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/wg5.jpg",
+   "href": "https://smart-wall.ru/news/v-linejke-nashih-produktov-est-unikalnaja-v-svoem-rode-sistema-wg5/",
+   "title": "В линейке наших продуктов есть уникальная в своем роде система WG5"
+  },
+  {
+   "date": "2019-10-17",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/5-1.jpg",
+   "href": "https://smart-wall.ru/news/trendy-v-oblasti-dizajna-ofisov-torgovyh-centrov-i-drugih-obektov-kommercheskoj-nedvizhimosti/",
+   "title": "Тренды в области дизайна офисов, торговых центров и других объектов коммерческой недвижимости."
+  },
+  {
+   "date": "2019-10-16",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/5.jpg",
+   "href": "https://smart-wall.ru/news/obrazovatelnye-uchrezhdenija-transformery/",
+   "title": "Монтаж перегородок в образовательных учреждениях"
+  }
+ ],
+ "reviews": [
+  {
+   "company": "Rosbank",
+   "role": "Руководитель проекта",
+   "text": "Раздвижная перегородка со встроенной дверью была идеальным решением под наши задачи разделения помещения на несколько зон. Замер и производство провели оперативно. Дизайнерское решение было довольно сложным в исполнении. Компания не подвела. Спасибо компании Smartwall за качественную работу.",
+   "logo": "http://smart-wall.ru/wp-content/uploads/2019/10/RosBank.jpg"
+  },
+  {
+   "company": "Holiday Inn",
+   "role": "Руководитель проекта",
+   "text": "Решение от компании SmartWall идеально вписалось в нашу концепцию трансформации пространства между рестораном и зоной завтраков. Производитель подобрал идеальные материалы. Срок и качество исполнения без нареканий. Благодарим компанию за сотрудничество.",
+   "logo": "http://smart-wall.ru/wp-content/uploads/2019/10/Holiday-Inn-logo.jpg"
+  },
+  {
+   "company": "Европлан",
+   "role": "Руководитель проекта",
+   "text": "Выражаем благодарность компании Smartwall за красивую и легкую в использовании перегородку. В срок немного не уложились, так как долго согласовывали и делали образцы заполнения секций. Но в конечном итоге все получилось хорошо.",
+   "logo": "http://smart-wall.ru/wp-content/uploads/2019/10/Evroplan.jpg"
+  },
+  {
+   "company": "Школа Летово",
+   "role": "Руководитель проекта",
+   "text": "Спасибо компании Смартволл за оперативное реагирование и качественное решение нашего не простого дизайнерского проекта. Все было сделано красиво и точно в срок. Компанию рекомендую. Будем сотрудничать и дальше.",
+   "logo": "http://smart-wall.ru/wp-content/uploads/2019/10/SH-letovo.jpg"
+  },
+  {
+   "company": "Архитектор",
+   "role": "Светлана Михайловна Петрова",
+   "text": "В проект заказчик попросил включить звукоизолирующие стены, чтобы с помощью них можно было формировать различные пространства. В интернете нашла поставщика раздвижных перегородок Смартволл. Специалисты сразу же дали полноценную консультацию по креплению, где можно сложить панели, когда перегородка не требуется. Я довольна сотрудничеством.",
+   "logo": "http://smart-wall.ru/wp-content/uploads/2019/10/Gerl.jpg"
+  },
+  {
+   "company": "Закзчик",
+   "role": "Андрей",
+   "text": "Работаем с компанией уже не в первый раз, опыт положительный. Будем работать и дальше. Нравится гибкость и быстрота решения задач и хороший, качественный продукт. Отдельное спасибо инженеру Сергею, он очень помог решить нашу не стандартную задачу с коммуникациями.",
+   "logo": "http://smart-wall.ru/wp-content/uploads/2019/10/Man.jpg"
+  },
+  {
+   "company": "Заказчик",
+   "role": "Дарья",
+   "text": "В своем офисе решили применить раздвижную перегородку от производителя SmartWall со встроенной дверью. Качество, сервис и сборка полностью устроили. Претензий нет, только благодарности. Ранее установленные перегородки работают уже более трех лет без нареканий.",
+   "logo": "http://smart-wall.ru/wp-content/uploads/2019/10/Gerl.jpg"
+  },
+  {
+   "company": "Заказчик",
+   "role": "Михаил Волков",
+   "text": "Обратился за раздвижными перегородками и не прогадал. Замер сделали быстро, инженер Сергей оперативно подготовил чертежи, сразу же задал вопросы, на что обратить внимание. Все качественно и в срок. Буду обращаться еще.",
+   "logo": "http://smart-wall.ru/wp-content/uploads/2019/10/Man.jpg"
+  }
+ ],
+ "stati": [
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/zvukoizolyacionnye_peregorodki_smartwall.jpg",
+   "title": "Звукоизоляционные перегородки",
+   "href": "https://smart-wall.ru/zvukoizolyacionnye-peregorodki/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/steklyannye_peregorodki_smartwall.jpg",
+   "title": "Раздвижные стеклянные перегородки",
+   "href": "https://smart-wall.ru/razdvizhnye-steklyannye-peregorodki/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/razdvizhnye_steny_smartwall.jpg",
+   "title": "Раздвижные стены для офиса",
+   "href": "https://smart-wall.ru/razdvizhnye-steny/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/razdvizhnye_peregorodki_ofis_smartwall.jpg",
+   "title": "Раздвижные перегородки для офиса",
+   "href": "https://smart-wall.ru/razdvizhnye-peregorodki/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/transformiruemye_peregorodki_ofis_smartwall.jpg",
+   "title": "Трансформируемые перегородки для офиса",
+   "href": "https://smart-wall.ru/transformiruemye-peregorodki/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/razdvizhnye_peregorodki_zonirovanie_smartwall.jpg",
+   "title": "Раздвижные перегородки для зонирования",
+   "href": "https://smart-wall.ru/razdvizhnye-peregorodki-dlya-zonirovaniya/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/razdvizhnye_peregorodki_peregovornye_smartwall.jpg",
+   "title": "Раздвижные перегородки для переговорных",
+   "href": "https://smart-wall.ru/peregorodki-dlja-peregovornyh-komnat/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/akusticheskie-razdvizhnye_peregorodki_smartwall.jpg",
+   "title": "Акустические раздвижные перегородки",
+   "href": "https://smart-wall.ru/akusticheskie-razdvizhnye-peregorodki/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/razdvizhnye_peregorodki_zakalennoe_steklo_smartwall.jpg",
+   "title": "Раздвижные перегородки из закаленного стекла",
+   "href": "https://smart-wall.ru/peregorodki-iz-zakalennogo-stekla/"
+  }
+ ],
+ "categories": [
+  {
+   "title": "Глухие раздвижные перегородки ( от 32 до 54 дБ)",
+   "href": "https://smart-wall.ru/zvukoizoljacionnye-gluhie/",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/12/products-group-01.jpg",
+   "desc": "Акустические раздвижные перегородки серий H7 и H5, обеспечивают максимальный уровень звукоизоляции от 36 до 52 Дб. В собранном виде глухая перегородка неотличима от стационарных стен. В секции перегородок могут быть встроены одно- и двустворчатые двери. Длина перегородки до 13,4 м, а высота секций — до 6 метров."
+  },
+  {
+   "title": "Раздвижные перегородки из стекла (до 42 дБ)",
+   "href": "https://smart-wall.ru/zvukoizoljacionnye-stekljannye/",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/12/Prod-2.jpg",
+   "desc": "Акустические раздвижные перегородки серии WG5 – это офисные прозрачные перегородки, которые легко перемещаются и препятствуют распространению звуков с уровнем громкости до 42 Дб. Они фундаментальны, надежны, и при этом легки в управлении и облегчают визуально интерьерные решения, делая их футуристичными."
+  },
+  {
+   "title": "Комбинированные раздвижные перегородки",
+   "href": "https://smart-wall.ru/zvukoizoljacionnye-kombi/",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/12/sw_new1.jpg",
+   "desc": "Акустические раздвижные перегородки серии H5C — это решение трансформации пространства, где важно сочетать обособленность и прозрачность. Секции комбинированных перегородок выполнены внизу из стандартных решений отделочных материалов и сверху прозрачного стекла. Уровень звукоизоляции — 42 Дб."
+  },
+  {
+   "title": "Цельностеклянные раздвижные перегородки",
+   "href": "https://smart-wall.ru/celnostekljannye-razdvizhnye-steny/",
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/12/Prod-3.jpg",
+   "desc": "Стеклянные раздвижные перегородки SmartWall серии G5 дают возможность разделить помещение на несколько функционально независимых зон. Перегородка G5 допускает установку под любыми углами. Секции G5 изготовлены из закаленного, безопасного цельностеклянного полотна. Звукоизоляция не регламентирована."
+  }
+ ],
+ "faq": [
+  {
+   "q": "Какова максимальная высота конструкции?",
+   "a": [
+    "Высота систем раздвижных перегородок составляет от 2 до 6 метров. В зависимости от типа системы."
+   ]
+  },
+  {
+   "q": "Какие параметры необходимы для предварительного расчета стоимости перегородки?",
+   "a": [
+    "Для предварительного расчета стоимости необходимы следующие параметры:",
+    "Высота видимого проема, размер запотолочного пространства, ширина проема, материал заполнения секций, желаемый уровень звукоизоляции."
+   ]
+  },
+  {
+   "q": "Какой уровень звукоизоляции обеспечивает трансформируемая перегородка?",
+   "a": [
+    "Перегородки системы SmartWall обеспечивают уровень звукоизоляции от 36 до 50 Дб."
+   ]
+  },
+  {
+   "q": "Каков вес конструкции?",
+   "a": [
+    "Вес за кв.м. перегородки(с подвесной конструкцией) в среднем составляет от 30 до 50 кг."
+   ]
+  },
+  {
+   "q": "Какие материалы используются для отдела секций?",
+   "a": [
+    "В отделке секций используется большой выбор материалов:",
+    "ЛДСП, шпон, пластик, магнитно-маркерные покрытия, различные виды тканей, МДФ окрашенный, негорючие СМЛ панели, обои, стекло."
+   ]
+  },
+  {
+   "q": "К чему крепится перегородка?",
+   "a": [
+    "К верхним перекрытиям при помощи подвесов. Возможно крепление к вспомогательной конструкции заказчика."
+   ]
+  },
+  {
+   "q": "Какие варианты парковок секций?",
+   "a": []
+  },
+  {
+   "q": "Каковы ваши преимущества?",
+   "a": [
+    "Надежность конструкции",
+    "Множество реальных объектов, где установленные нами перегородки служат уже более 10 лет.",
+    "Ассортимент",
+    "Широкий ассортимент перегородок собственного производства при необходимости мы дополняем импортными системами с целью удовлетворить все потребности клиентов.",
+    "Гарантии",
+    "Мы гарантируем качество на разные элементы наших систем в течении 1,3,5,10 лет. Гарантия качества заполнения определяется гарантией поставщика.",
+    "Цены",
+    "Собственное российское производство позволяет устанавливать самые низкие цены относительно аналогов.",
+    "Качество",
+    "Системы разрабатываются и совершенствуются разработчиками с 20 летним опытом в данной специфике.",
+    "Партнерство",
+    "Мы разрабатываем, производим, устанавливаем и поддерживаем продукты с 1995 года.",
+    "Мы заинтересованы в долгосрочном сотрудничестве и всегда исполняем взятые на себя обязательства.",
+    "Мы рядом на протяжении всего срока службы наших продуктов.",
+    "Сертификаты",
+    "Мы дорожим своей репутацией и уважаем клиентов, поэтому получаем все необходимые сертификаты в проверенных компаниях и работаем только с надежными и честными поставщиками.",
+    "Сроки",
+    "Производим и устанавливаем перегородки под ключ в срок от 20 рабочих дней. Расположение производства в ближайшем Подмосковье и наличие всех необходимых комплектующих на складе- залог оперативного реагирования на любой запрос клиента даже после сдачи объекта. Специалисты службы сервиса всегда рядом.",
+    "Профессионализм",
+    "В таких продуктах, как трансформируемые стены безопасность и надежность-основополагающие качества. Опытные инженеры спроектируют установку систем на проектах с самой сложной системой запотолочных коммуникаций. Опытные монтажные бригады установят и отрегулируют работу систем."
+   ]
+  },
+  {
+   "q": "Осуществляете ли вы доставку и монтаж?",
+   "a": [
+    "Мы оказываем все услуги сервиса, включая пост гарантийное обслуживание."
+   ]
+  },
+  {
+   "q": "Возможна ли установка дверей в перегородке?",
+   "a": [
+    "В перегородках возможна установка двупольных и однопольных дверей."
+   ]
+  },
+  {
+   "q": "Каковы ваши гарантийные обязательства?",
+   "a": [
+    "Гарантия на различные системы SmartWall до 3х лет."
+   ]
+  },
+  {
+   "q": "Где используются трансформируемые перегородки?",
+   "a": [
+    "Везде где необходимо разделить пространство."
+   ]
+  },
+  {
+   "q": "Каковы сроки производства?",
+   "a": [
+    "От 20 р.д в зависимости от сложности панелей."
+   ]
+  },
+  {
+   "q": "Как осуществляется доставка и сборка?",
+   "a": [
+    "Доставка и сборка осуществляется нашей службой сервиса. При желании заказчик может сделать это самостоятельно."
+   ]
+  },
+  {
+   "q": "На каком этапе строительства необходимо производить замер?",
+   "a": [
+    "Замер можно проводить в два этапа, на этапе черновой отделки и на этапе чистовой. Для проведения замера запотолочное пространство должно быть свободно."
+   ]
+  },
+  {
+   "q": "Какие требования к проему перед монтажом ?",
+   "a": [
+    "1.Ширина проема после окончательной (чистовой) отделки стен/ простенков/колонн должны быть выдержанны в пределах допуска +-5мм.",
+    "2.Проем представляет собой прямоугольник без ниш, выступов, ступеней и пр. с предельными отклонениями от вертикальности стен +-5мм.",
+    "3.Ось перегородки перпендикулярна плоскости стен/ простенков/колонн формирующих проем.",
+    "4.Наличие каких-либо конструктивных элементов (стен, простенков, колонн, перепадов уровня фальш-потолка и т.д.) и коммуникаций, препятствующих монтажу, свободному движению секций и эксплуатации перегородки не допускается. Фальш-потолок на всех путях следования секций не должен располагаться ниже уровня трека в зоне 700мм в каждую сторону от оси трека.",
+    "5.Наличие открытой либо скрытой электропроводки в местах примыкания перегородок к элементам проема (на глубине менее 100мм) не допускается.",
+    "Оставьте заявку прямо сейчас",
+    "и получите замер",
+    "бесплатно",
+    "Прикрепить файл",
+    "Согласен(а) на обработку персональных данных",
+    "Согласен(а) на",
+    "обработку персональных данных",
+    "Отзывы о нас",
+    "Rosbank",
+    "Руководитель проекта",
+    "Раздвижная перегородка со встроенной дверью была идеальным решением под наши задачи разделения помещения на несколько зон.",
+    "Замер и производство провели оперативно. Дизайнерское решение было довольно сложным в исполнении. Компания не подвела. Спасибо компании Smartwall за качественную работу.",
+    "Holiday Inn",
+    "Руководитель проекта",
+    "Решение от компании SmartWall идеально вписалось в нашу концепцию трансформации пространства между рестораном и зоной завтраков.",
+    "Производитель подобрал идеальные материалы. Срок и качество исполнения без нареканий. Благодарим компанию за сотрудничество.",
+    "Смотреть все отзывы"
+   ]
+  }
+ ],
+ "certs": [
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/sertificat_RU-HX37_H08014.jpg",
+   "alt": "Сертификат соответствия на раздвижные перегородки RU HX37_H08014"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/sertificat_RU-HX37_H08014.jpg",
+   "alt": "Сертификат соответствия на раздвижные перегородки RU HX37_H08014"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/sertificat_Н-00481.jpg",
+   "alt": "Сертификат соответствия на раздвижные перегородки Н 00481"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2021/10/sertificat_Н-00481.jpg",
+   "alt": "Сертификат соответствия на раздвижные перегородки Н 00481"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/RosBank.jpg",
+   "alt": "Росбанк - клиент компании Smart Wall"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/10/Holiday-Inn-logo.jpg",
+   "alt": "Гостиница Holiday Inn - клиент компании Smart Wall"
+  }
+ ],
+ "cert_links": [
+  "https://smart-wall.ru/wp-content/uploads/2021/10/sertificat_RU-HX37_H08014.jpg",
+  "https://smart-wall.ru/wp-content/uploads/2021/10/sertificat_Н-00481.jpg",
+  "https://smart-wall.ru/wp-content/uploads/2021/10/sertificat_RU-HX37_H08014.jpg",
+  "https://smart-wall.ru/wp-content/uploads/2021/10/sertificat_Н-00481.jpg"
+ ],
+ "contacts_requisites": [
+  "Реквизиты",
+  "Полное наименование: Общество c ограниченной ответственностью «СМАРТ ТЕХНО СЕРВИС»",
+  "Сокращенное наименование: ООО «СМАРТ ТЕХНО СЕРВИС»",
+  "ОГРН: 1207700247160",
+  "ИНН: 9729298007",
+  "КПП: 772901001",
+  "ОКПО: 44890845",
+  "Юридический адрес: 119618, г. Москва, шоссе Боровское, дом 2а, корпус 3, квартира 385",
+  "Почтовый адрес: 119618, г. Москва, шоссе Боровское, дом 2а, корпус 3, квартира 385",
+  "Фактический адрес: 121059, г. Москва, Бережковская набережная, д.16А стр. 2",
+  "Банковские реквизиты: Наименование банка АО \"АЛЬФА-БАНК\" г. Москва",
+  "Расчетный счет: 40702810201600013123",
+  "БИК: 044525593",
+  "Корреспондентский счет: 30101810200000000593"
+ ],
+ "contacts_offices": [
+  "Главная страница",
+  "Контакты SmartWall",
+  "Контакты SmartWall",
+  "📌 Офис SmartWall",
+  "Офис компании SmartWall, производителя раздвижных перегородок, находится в 15 мин. от м. Киевская и здания Киевского вокзала. Вы выходите на Бережковскую набережную и идете по ней мимо гостиницы Radisson по направлению к Воробьевым горам. Примерно, через 1км от м. Киевская вы увидите автомойку. Перед ней поворот направо, и вход на территорию бизнес-центра «Riverside Station».",
+  "🌏 Адрес:",
+  "г. Москва, Бережковская наб., д. 16 А, стр. 2, БЦ «Riverside Station»",
+  "📞 Связь:",
+  "Тел.:+7 (499) 755-88-45,",
+  "E-mail: Info@smart-wall.ru",
+  "⏲ Режим работы:",
+  "пн-пт: 09:00 — 18:00,",
+  "сб-вс: выходной",
+  "🎁 Работает Show-room:",
+  "пн-пт: 09:00 — 18:00,",
+  "сб-вс: выходной",
+  "📝 Прием заявок:",
+  "пн-пт: 09:00 — 18:00,",
+  "сб-вс: выходной",
+  "Местоположение офиса SmartWall на карте",
+  "МоскваЯндекс.Карты",
+  "📍 Производство SmartWall",
+  "Производство SmartWall находится в Московской области, в Домодедовском районе, в селе Ям. Добраться до него можно либо на машине, либо общественным транспортом",
+  "🚘 Проезд на машине",
+  "Для проезда на машине лучше ввести точные координаты в навигатор в телефоне. Координаты GPS: СШ: 55°28´44.9˝ (55.479146); ВД: 37°45´43.6˝ (37.762108)",
+  "🚆 Проезд на общественном транспорте",
+  "От м. Домодедовская, выход из первого вагона из центра, из стеклянных дверей направо, далее по лестнице направо к автобусным остановкам.",
+  "Автобус (маршрутка) № 466, остановка «Река Пахра». Нужно перейти дорогу по пешеходному переходу, пройти направо вдоль серого бетонного забора, после которого повернуть налево (как ориентир указатель на «Мещерино»).",
+  "Следует пройти заправку с магазином «24 часа», располагающиеся вдоль дороги с правой стороны, и перейти через эстакадный мост. Справа на поле будут видны большие ангары, в одном из которых располагается производство SmartWall.",
+  "🌏 Адрес производства:",
+  "142030, Россия, Мос. обл., Домодедовский р-н, Село Ям, тер. «Клён-Ям»",
+  "📞 Связь:",
+  "Тел.:+7 (499) 755-88-45,",
+  "E-mail: Info@smart-wall.ru",
+  "⏲ Режим работы:",
+  "пн-пт: 09:00 — 18:00,",
+  "сб-вс: выходной",
+  "Местоположение производства SmartWall на карте",
+  "МоскваЯндекс.Карты",
+  "Оставьте заявку прямо сейчас",
+  "и получите замер бесплатно",
+  "Прикрепить файл",
+  "Согласен(а) на обработку персональных данныхСогласен(а) на обработку персональных данных",
+  "Отзывы о нас",
+  "Rosbank",
+  "Руководитель проекта",
+  "Раздвижная перегородка со встроенной дверью была идеальным решением под наши задачи разделения помещения на несколько зон.",
+  "Замер и производство провели оперативно. Дизайнерское решение было довольно сложным в исполнении. Компания не подвела. Спасибо компании Smartwall за качественную работу.",
+  "Holiday Inn",
+  "Руководитель проекта",
+  "Решение от компании SmartWall идеально вписалось в нашу концепцию трансформации пространства между рестораном и зоной завтраков.",
+  "Производитель подобрал идеальные материалы. Срок и качество исполнения без нареканий. Благодарим компанию за сотрудничество.",
+  "Смотреть все отзывы"
+ ],
+ "videos": [
+  {
+   "src": "http://smart-wall.ru/wp-content/uploads/2020/05/SVP_SMARTWALL.mp4",
+   "title": "Пример трансформации помещений во дворце творчества детей и молодежи имени А.П. Гайдара"
+  }
+ ],
+ "home_cards": [],
+ "home_projects": [
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/11/DSC1404.jpg",
+   "date": "Ноябрь 2020",
+   "title": "Раздвижные перегородки в «Школа Олимп»",
+   "href": "https://smart-wall.ru/projects/shkola-olimp/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/07/SHAT2553.jpg",
+   "date": "Август 2020",
+   "title": "Раздвижные перегородки SmartWall в Большом Театре",
+   "href": "https://smart-wall.ru/projects/bolshoj-teatr/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/05/news-1991-6.jpg",
+   "date": "Май 2020",
+   "title": "Трансформируемые перегородки SmartWall в «Банк Центр Кредит»",
+   "href": "https://smart-wall.ru/projects/bank-v-kazahstane/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/05/news-2022-11.jpg",
+   "date": "Май 2020",
+   "title": "Раздвижные перегородки в офисе компании Weatherford",
+   "href": "https://smart-wall.ru/projects/prostranstvo-dlja-uspeshnyh-peregovorov-kompanii-weatherford/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/05/MG_0109.jpg",
+   "date": "Май 2020",
+   "title": "Раздвижные перегородки в офисе компании MAIL.RU",
+   "href": "https://smart-wall.ru/projects/ofis-mail-ru/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/05/img_47_993_a.jpg",
+   "date": "Май 2020",
+   "title": "Раздвижные перегородки в БЦ «Президент»",
+   "href": "https://smart-wall.ru/projects/bc-prezident-g-ekaterinburg/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/2441.jpg",
+   "date": "Апрель 2020",
+   "title": "Перегородка SmartWall в офисе Алкогольной Сибирской Группы",
+   "href": "https://smart-wall.ru/projects/alkogolnaja-kompanija/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/news-2095-6.jpg",
+   "date": "Апрель 2020",
+   "title": "Цельностеклянные и раздвижные перегородки в ТРЦ \"Афимолл Сити\"",
+   "href": "https://smart-wall.ru/projects/smartwall-v-afimolle/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/MG_0331.jpg",
+   "date": "Апрель 2020",
+   "title": "Трансформируемые перегородки в офисе компании Paulig",
+   "href": "https://smart-wall.ru/projects/ofis-kompanii-paulig/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/news-2999-6.jpg",
+   "date": "Апрель 2020",
+   "title": "Раздвижная система перегородок в консалтинговой компании CBRE",
+   "href": "https://smart-wall.ru/projects/konsaltingovaja-kompanija-cbre/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/04/21.jpg",
+   "date": "Апрель 2020",
+   "title": "Раздвижная система перегородок в БЦ «КРАСНЫЕ ХОЛМЫ»",
+   "href": "https://smart-wall.ru/projects/krasnye-holmy/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/03/Untitled_Panorama1.jpg",
+   "date": "Март 2020",
+   "title": "Стеклянные раздвижные перегородки в офисе Itella Connexion",
+   "href": "https://smart-wall.ru/projects/ofis-itella-connexion/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2020/03/MG_0045.jpg",
+   "date": "Март 2020",
+   "title": "Система перегородок-трансформеров в офисе фирмы 1С",
+   "href": "https://smart-wall.ru/projects/kompanija-1s/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/08/IMG_0013_enfuse-1.jpg",
+   "date": "Август 2019",
+   "title": "Раздвижные перегородки в школе в Некрасовском районе",
+   "href": "https://smart-wall.ru/projects/shkola/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/08/IMG_4027-1.jpg",
+   "date": "Август 2019",
+   "title": "Раздвижная перегородка в ХОЛЛИДЕЙ ИНН ЭКСПРЕСС ШЕРЕМЕТЬЕВО",
+   "href": "https://smart-wall.ru/projects/hollidej-inn-jekspress-sheremetevo/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/07/IMG_0531-1.jpg",
+   "date": "Июль 2019",
+   "title": "Раздвижные перегородки в высших учебных заведениях",
+   "href": "https://smart-wall.ru/projects/vysshee-uchebnoe-zavedenie/"
+  },
+  {
+   "img": "https://smart-wall.ru/wp-content/uploads/2019/07/DSC4222-2.jpg",
+   "date": "Июль 2019",
+   "title": "Раздвижные звукоизоляционные перегородки в компании Мираторг",
+   "href": "https://smart-wall.ru/projects/miratorg/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/07/IMG_1814-1.jpg",
+   "date": "Июль 2019",
+   "title": "Трансформируемая перегородка БЦ \"Оазис\"",
+   "href": "https://smart-wall.ru/projects/biznes-centr-oazis/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/07/6d3da17d4bab637d96c5798006d923a4_720x1000-1.jpg",
+   "date": "Июль 2019",
+   "title": "Трансформируемые перегородки в офисе РОСБАНК",
+   "href": "https://smart-wall.ru/projects/rosbank-nizhnij-novgorod/"
+  },
+  {
+   "img": "http://smart-wall.ru/wp-content/uploads/2019/07/3uqJe0VLzN0-1.jpg",
+   "date": "Июль 2019",
+   "title": "Раздвижные перегородки в танцевальной студии",
+   "href": "https://smart-wall.ru/projects/tancevalnaja-studija/"
+  }
+ ]
+}
